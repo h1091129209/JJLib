@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="act_transparent_appthere" parent="appthere">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="selectableItemBackground">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+</resources>

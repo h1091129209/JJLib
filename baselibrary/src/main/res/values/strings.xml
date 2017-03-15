@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BaseLibrary</string>
+    <string name="j_permissions_no_authorization">未授予相关权限</string>
+    <string name="j_permissions_no_authorization_msg">请到设置-应用程序-权限，授予相关权限</string>
+    <string name="j_permissions_set">设置</string>
+    <string name="j_permissions_ext">退出</string>
+    <string name="j_permissions_no">由于您未授予相关权限，该功能无法正常使用</string>
+</resources>

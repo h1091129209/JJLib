@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SwipeBackLayout">
+        <!--滑动的边缘距离-->
+        <item name="edge_size">60dip</item>
+        <!--可滑动的边缘left，right，bottom，all-->
+        <item name="edge_flag">left</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+
+    <!--全屏主题-->
+    <style name="welcome_appthere" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@mipmap/ic_default_image</item>
+    </style>
+
+    <!--application主题-->
+    <style name="appthere" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 状态栏. -->
+        <item name="colorPrimaryDark">@color/jj_colorPrimaryDark</item>
+        <!-- 标题栏. -->
+        <item name="colorPrimary">@color/jj_colorPrimary</item>
+        <!-- 控件选中提示. -->
+        <item name="colorAccent">@color/jj_colorAccent</item>
+        <!-- toolbar -->
+        <!-- menu的字体颜色（记住不要android:） -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <!--<item name="android:windowAnimationStyle">@style/activity_animation</item>-->
+    </style>
+
+
+    <!--右滑返回兼容5.0以前需要的window透明, 最底层activity最好不要用这个-->
+    <style name="act_transparent_appthere" parent="appthere">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--白色标题栏-->
+    <style name="white_title_act_transparent_appthere" parent="act_transparent_appthere">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="titleTextColor">@android:color/black</item>
+    </style>
+
+    <!--右滑返回需要的window透明+标题栏透明+标题栏悬浮在布局上面-->
+    <style name="act_title_transparent_appthere" parent="act_transparent_appthere">
+        <!--标题栏是否悬浮在布局上面-->
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+    <!--activity跳转动画左进右出，主题android:windowAnimationStyle-->
+    <style name="activity_animation" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:activityOpenEnterAnimation">@anim/right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/left_out</item>
+        <item name="android:activityCloseExitAnimation">@anim/right_out</item>
+    </style>
+</resources>
